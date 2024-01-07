@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  animation: spinner-plncf9 4s infinite;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  border: 9px solid;
+  border-radius: 50%;
+  border-color: #474bff #474bff #0000 #0000;
+  mix-blend-mode: darken;
+  animation: spinner-plncf9 1s infinite linear;
+}
+
+.spinner::after {
+  border-color: #0000 #0000 #dbdcef #dbdcef;
+  animation-direction: reverse;
+}
+
+@keyframes spinner-plncf9 {
+  100% {
+     transform: rotate(1turn);
+  }
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: radial-gradient(#ffffff 2.5px, transparent 2.5px),
+    radial-gradient(#ffffff 2.5px, transparent 2.5px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+  background-color: #b1d2ff;
+  height: 100%;
+}
+
+.heading{
+  background-color: white;
+  width: 1300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.random{
+  max-width: 100%;
+  height: auto;
+  width: 1300px;
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.random button{
+  width : 100px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid skyblue;
+  background-color: grey;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.random button:hover{
+  background-color: white;
+}
+
+.tag{
+  max-width: 100%;
+  height: auto;
+  width: 1300px;
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.tag input{
+  width: 500px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid skyblue;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.tag button{
+  width : 100px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid skyblue;
+  background-color: grey;
+  cursor: pointer;  
+  margin-bottom: 20px;
+}
+
+.tag button:hover{
+  background-color: white;
+}
